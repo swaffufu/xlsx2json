@@ -1,0 +1,240 @@
+{
+    "NO. ANGGOTA": 5000,
+    "GELARAN": "PUAN",
+    "NAMA": "IZMEE NUR BINTI ABDUL RASHID.",
+    "NO. K/P": "860325-59-5170",
+    "TARIKH LAHIR": "25-MAR-86",
+    "ALAMAT TETAP": "NO.46,JALAN SERI MERANTI,TMAN BUKIT CHEDANG,70300 SEREMBAN.",
+    "ALAMAT SURAT MENYURAT": "NO.46,JALAN SERI MERANTI,TMAN BUKIT CHEDANG,70300 SEREMBAN.",
+    "NO. TELEFON ANGGOTA": "06-6798113 / 016-3267722",
+    "PERKERJAAN": "PENGARAH SYARIKAT",
+    "TARIKH MASUK": "17-OCT-18",
+    "TARIKH LULUS ALK": "02-NOV-18",
+    "NOMINEE": {
+        "NAME": "NORMA BINTI MOHD SANI",
+        "RELATIONSHIP": "IBU",
+        "IC": "570819-05-5152",
+        "PHONE": "012-6362961"
+    },
+    "TRANSACTIONS": [
+        {
+            "TARIKH": "02-11-18",
+            "PERKARA": "P/S",
+            "WANG MASUK": 5028.52,
+            "BAKI SYER": 5028.52,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6028.52,
+            "CATATAN": "MODAL-4314.90,DIV-343.62,KHAIRAT-200,KEBAJIKAN AM-170.00"
+        },
+        {
+            "TARIKH": "31-12-18",
+            "BAKI SYER": 5028.52,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6028.52,
+            "CATATAN": "LULUS ALK 02 NOV 2018"
+        },
+        {
+            "TARIKH": "30-06-19",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2018,
+            "BAKI SYER": 5028.52,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6028.52,
+            "ADDITIONAL_DATA_1": 150.8556,
+            "ADDITIONAL_DATA_2": 5.0,
+            "ADDITIONAL_DATA_3": 155.8556
+        },
+        {
+            "TARIKH": "31-12-19",
+            "BAKI SYER": 5028.52,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6028.52
+        },
+        {
+            "TARIKH": "30-06-20",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2019,
+            "WANG MASUK": 155.8556,
+            "BAKI SYER": 5184.3756,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6184.3756,
+            "ADDITIONAL_DATA_1": 155.531268,
+            "ADDITIONAL_DATA_2": 5.0,
+            "ADDITIONAL_DATA_3": 160.531268
+        },
+        {
+            "TARIKH": "31-12-20",
+            "BAKI SYER": 5184.3756,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6184.3756
+        },
+        {
+            "TARIKH": "30-06-21",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2020,
+            "WANG MASUK": 160.531268,
+            "BAKI SYER": 5344.906868,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6344.906868,
+            "ADDITIONAL_DATA_1": 374.1434808,
+            "ADDITIONAL_DATA_2": 10.0,
+            "ADDITIONAL_DATA_3": 384.1434808
+        },
+        {
+            "TARIKH": "31-12-21",
+            "BAKI SYER": 5344.906868,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6344.906868
+        },
+        {
+            "TARIKH": "30-06-22",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2021,
+            "WANG MASUK": 384.1434808,
+            "BAKI SYER": 5729.050349,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6729.050349,
+            "ADDITIONAL_DATA_1": 630.1955384,
+            "ADDITIONAL_DATA_2": 30.0,
+            "ADDITIONAL_DATA_3": 660.1955384
+        },
+        {
+            "TARIKH": "31-12-22",
+            "BAKI SYER": 5729.050349,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 6729.050349
+        },
+        {
+            "TARIKH": "30-06-23",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2022,
+            "WANG MASUK": 660.1955384,
+            "BAKI SYER": 6389.245887,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 7389.245887
+        },
+        {
+            "TARIKH": "31-12-23",
+            "BAKI SYER": 6389.245887,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 7389.245887
+        },
+        {
+            "TARIKH": "30-06-24",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2023,
+            "BAKI SYER": 6389.245887,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 7389.245887
+        },
+        {
+            "TARIKH": "31-12-24",
+            "BAKI SYER": 6389.245887,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 7389.245887
+        },
+        {
+            "TARIKH": "30-06-25",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2024,
+            "BAKI SYER": 6389.245887,
+            "BAKI BONUS": 1000,
+            "BAKI SEMUA": 7389.245887
+        },
+        {
+            "TARIKH": "31-12-25",
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "30-06-26",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2025,
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "31-12-26",
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "30-06-27",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2026,
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "31-12-27",
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "30-06-28",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2027,
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "31-12-28",
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "30-06-29",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2028,
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "31-12-29",
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "30-06-30",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2029,
+            "BAKI SYER": 6389.245887,
+            "BAKI SEMUA": 6389.245887
+        },
+        {
+            "TARIKH": "31-12-30"
+        },
+        {
+            "TARIKH": "30-06-31",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2030
+        },
+        {
+            "TARIKH": "31-12-31"
+        },
+        {
+            "TARIKH": "30-06-32",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2031
+        },
+        {
+            "TARIKH": "31-12-32"
+        },
+        {
+            "TARIKH": "30-06-33",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2032
+        },
+        {
+            "TARIKH": "31-12-33"
+        },
+        {
+            "TARIKH": "30-06-34",
+            "PERKARA": "DIVIDEN",
+            "TAHUN": 2033
+        },
+        {
+            "TARIKH": "31-12-34"
+        }
+    ]
+}
