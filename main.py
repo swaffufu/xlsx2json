@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import argparse
+import sys
 from datetime import datetime, timedelta
 import re
 
@@ -345,22 +346,60 @@ def excel_to_json(excel_file, sheet_name='Sheet'):
     return excel_data_fragment.to_json()
 
 
-def main():
+def main_processing_logic(excel_file, sheet_identifier, output_json):
+    try:
+        json_str = excel_to_json(excel_file, sheet_identifier)
+        json_str = excel_to_json(excel_file, sheet_identifier)
+        if not json_str or json_str == "null":
+            print(f"Skipping sheet {sheet_identifier} because it's empty or could not be read.")
+            return 1
+        
+        json_data = json.loads(json_str)
+
+        if not json_data:
+            print(f"Skipping sheet {sheet_identifier} because it resulted in empty JSON data.")
+            return 1
+
+        cleaned_data = clean_json_data(json_data)
+        if not cleaned_data:
+            print(f"Skipping sheet {sheet_identifier} because cleaned data is empty.")
+            return 1
+
+        formatted_data = format_dynamically(cleaned_data)
+        
+        if not formatted_data:
+            print(f"Skipping sheet {sheet_identifier} because formatted data is empty (possibly main Koperasi header was not found or data insufficient).")
+            return 1
+        
+        # Further check if essential member data is present after formatting
+        # This helps confirm it's a valid member statement sheet
+        if not (formatted_data.get("NO. ANGGOTA") or formatted_data.get("NAMA")):
+            print(f"Skipping sheet {sheet_identifier} because essential Koperasi member data (No. Anggota or Nama) is missing after formatting.")
+            return 1
+
+        with open(output_json, 'w', encoding='utf-8') as f:
+            json.dump(formatted_data, f, indent=4, ensure_ascii=False)
+        print(f"Successfully processed sheet {sheet_identifier} to {output_json}.")
+        return 0
+    except FileNotFoundError:
+        print(f"Error: Excel file '{excel_file}' not found for sheet {sheet_identifier}.")
+        return 2
+    except ValueError as ve:
+        print(f"ValueError processing sheet {sheet_identifier}: {ve}")
+        return 2
+    except KeyError as ke:
+        print(f"Skipping sheet {sheet_identifier} as it was not found in the Excel file: {ke}")
+        return 1
+    except Exception as e:
+        print(f"An unexpected error occurred processing sheet {sheet_identifier}: {e}")
+        return 2
+
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process Excel file and output formatted JSON.")
     parser.add_argument("excel_file", help="Path to the Excel file.")
     parser.add_argument("sheet_name", help="Name of the sheet to convert.")
     parser.add_argument("output_file", help="Path to save the final JSON output.")
     args = parser.parse_args()
 
-    json_str = excel_to_json(args.excel_file, args.sheet_name)
-    json_data = json.loads(json_str)
-
-    cleaned_data = clean_json_data(json_data)
-    formatted_data = format_dynamically(cleaned_data)
-    
-    with open(args.output_file, 'w', encoding='utf-8') as f:
-        json.dump(formatted_data, f, indent=4, ensure_ascii=False)
-
-
-if __name__ == "__main__":
-    main()
+    result_code = main_processing_logic(args.excel_file, args.sheet_name, args.output_file)
+    sys.exit(result_code)

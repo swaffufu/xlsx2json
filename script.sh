@@ -1,26 +1,44 @@
 #!/bin/bash
 
-# The fixed Excel filename
 EXCEL_FILE="test2.xlsx"
+PYTHON_SCRIPT_PATH="main.py"
+skipped_or_errored_sheets=()
 
-# The base path for your Python script (if not in PATH or current dir)
-# PYTHON_SCRIPT_PATH="./combined_script.py" # Example if it's in the current directory
-PYTHON_SCRIPT_PATH="main.py" # Assuming it's in PATH or current directory
+echo "Starting sheet processing..."
+echo "--------------------------------------------------"
 
-# Loop from 5000 to 5099
-for i in $(seq 5000 5099)
+# Loop
+for i in $(seq 5084 5085)
 do
-  # The number to be used for sheet identification and JSON filename
   current_number="$i"
+  sheet_identifier_arg="$current_number" 
   output_json_filename="${current_number}.json"
 
-  # Echo the command that will be run (optional, useful for logging/debugging)
-  echo "Running: python3 \"${PYTHON_SCRIPT_PATH}\" \"${EXCEL_FILE}\" \"${current_number}\" \"${output_json_filename}\""
+  echo "Running: python3 \"${PYTHON_SCRIPT_PATH}\" \"${EXCEL_FILE}\" \"${sheet_identifier_arg}\" \"${output_json_filename}\""
 
-  # Execute the Python script
-  python3 "${PYTHON_SCRIPT_PATH}" "${EXCEL_FILE}" "${current_number}" "${output_json_filename}"
+  python3 "${PYTHON_SCRIPT_PATH}" "${EXCEL_FILE}" "${sheet_identifier_arg}" "output.json"
   
-  # Optional: Add a small delay if needed, e.g., sleep 1 (for 1 second)
+  exit_status=$?
+  
+  if [ $exit_status -ne 0 ]; then
+    echo "WARNING: Sheet ${current_number} - Python script exited with status ${exit_status}."
+    skipped_or_errored_sheets+=("${current_number} (Exit Code: ${exit_status})")
+  fi
+  
+  sleep 1 
 done
 
+echo "--------------------------------------------------"
 echo "All commands executed."
+echo ""
+
+if [ ${#skipped_or_errored_sheets[@]} -ne 0 ]; then
+  echo "The following sheets were skipped or resulted in an error during processing:"
+  for sheet_info in "${skipped_or_errored_sheets[@]}"; do
+    echo "  - Sheet ${sheet_info}"
+  done
+else
+  echo "All sheets were processed successfully (or the Python script reported exit code 0 for all)."
+fi
+
+echo "--------------------------------------------------"
